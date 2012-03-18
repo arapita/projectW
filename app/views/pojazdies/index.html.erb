@@ -1,0 +1,38 @@
+<% title "Wszystkie pojazdy" %>
+
+<%= form_tag pojazdies_path, :method => :get, :id => "pojazdies_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Zlokalizuj", :name => nil %>
+  </p>
+<% end %>
+
+<table border="2">
+  <tr>
+    <td>Marka</td>
+    <td>Numer rejestracyjny</td>
+    <td>Lokalizacja</td>
+  </tr>
+
+<% @pojazdies.each do |pojazdy| %>
+  <tr>
+    <td>  <%= pojazdy.marka %></td>
+    <td>  <%= pojazdy.nr_rejestracyjnyn %></td>
+    <td>  <%= pojazdy.lokalizacja %></td>
+
+   
+    <td> <%= link_to 'Pokaż', pojazdy %> </td>
+    <% if can? :edit, pojazdy %>
+    <td> <%= link_to 'Edytuj', edit_pojazdy_path(pojazdy) %> </td>
+    <% end %>
+    <% if can? :delete, pojazdy %>
+    <td> <%= link_to 'Usuń', pojazdy, confirm: 'Jesteś pewien?', method: :delete %> </td>
+    <% end %>
+  </tr>
+<% end %>
+  
+</table>
+<br />
+<% if can? :create, Pojazdy %>
+  <%= link_to 'Nowy Pojazd', new_pojazdy_path %>
+<% end %>

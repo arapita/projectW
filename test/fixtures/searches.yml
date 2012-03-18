@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  marka: MyString
+  lokalizacja: MyString
+  dysponent: MyString
+  min_stan: 1
+  max_stan: 1
+
+two:
+  marka: MyString
+  lokalizacja: MyString
+  dysponent: MyString
+  min_stan: 1
+  max_stan: 1

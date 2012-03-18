@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_przyj: MyString
+  godz_przy: MyString
+  stan_licz: 1
+  zat_paliwo: MyString
+
+two:
+  data_przyj: MyString
+  godz_przy: MyString
+  stan_licz: 1
+  zat_paliwo: MyString

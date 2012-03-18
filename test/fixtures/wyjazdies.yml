@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_wyjazdu: MyString
+  godz_wyjazdu: MyString
+  marka_poj: MyString
+  nr_rej: MyString
+  kierowca: MyString
+  miejsce: MyString
+  stan_licznika: 1
+
+two:
+  data_wyjazdu: MyString
+  godz_wyjazdu: MyString
+  marka_poj: MyString
+  nr_rej: MyString
+  kierowca: MyString
+  miejsce: MyString
+  stan_licznika: 1

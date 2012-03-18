@@ -1,0 +1,2 @@
+module PrzyjazdiesHelper
+end

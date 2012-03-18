@@ -1,0 +1,39 @@
+<% title "Przyjazdy" %>
+
+<% @przyjazdies.each do |przyjazdy| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Data przyj</span>
+    <span class="value"><%= przyjazdy.data_przyj %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Godz przy</span>
+    <span class="value"><%= przyjazdy.godz_przy %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Nr rejestracyjny</span>
+    <span class="value"><%= przyjazdy.nr_rej %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Stan licz</span>
+    <span class="value"><%= przyjazdy.stan_licz %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Zat paliwo</span>
+    <span class="value"><%= przyjazdy.zat_paliwo %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Pokaż', przyjazdy %>
+      <% if can? :edit, Przyjazdy %>
+    <%= link_to 'Edytuj', edit_przyjazdy_path(przyjazdy) %>
+      <% end %>
+      <% if can? :delete, Przyjazdy %>
+    <%= link_to 'Usuń', przyjazdy, confirm: 'Are you sure?', method: :delete %>
+      <% end %>
+  </div>
+</article>
+<% end %>
+
+<% if can? :create, Przyjazdy %>
+  <%= link_to 'Nowy przyjazd', new_przyjazdy_path %>
+<% end %>

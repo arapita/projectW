@@ -1,0 +1,48 @@
+<%= form_for(@wyjazdy) do |f| %>
+  <% if @wyjazdy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wyjazdy.errors.count, "error") %> prohibited this wyjazdy from being saved:</h2>
+
+      <ul>
+      <% @wyjazdy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data_wyjazdu %>
+    <%= f.text_field :data_wyjazdu %>
+  </div>
+  <div class="field">
+    <%= f.label :godz_wyjazdu %>
+    <%= f.text_field :godz_wyjazdu %>
+  </div>
+  <div class="field">
+    <%= f.label :marka_poj %>
+    <%= f.text_field :marka_poj %>
+  </div>
+  <div class="field">
+    <%= f.label :nr_rej %>
+    <%= f.text_field :nr_rej %>
+  </div>
+  <div class="field">
+    <%= f.label :kierowca %>
+    <%= f.text_field :kierowca %>
+  </div>
+
+  <div class="field">
+    <%= f.label :miejsce %>
+    <%= f.text_field :miejsce %>
+      
+  </div>
+
+  <div class="field">
+    <%= f.label :stan_licznika %>
+    <%= f.number_field :stan_licznika %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

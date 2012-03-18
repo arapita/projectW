@@ -1,0 +1,32 @@
+<% title "Show przyjazdy" %>
+
+<% if notice -%>
+<div id="notice"><%= notice %></div>
+<% end -%>
+
+<article class="single">
+  <div class="attribute">
+    <span class="name">Data przyj</span>
+    <span class="value"><%= @przyjazdy.data_przyj %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Godz przy</span>
+    <span class="value"><%= @przyjazdy.godz_przy %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Nr rejestarcyjny</span>
+    <span class="value"><%= @przyjazdy.nr_rej %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Stan licz</span>
+    <span class="value"><%= @przyjazdy.stan_licz %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Zat paliwo</span>
+    <span class="value"><%= @przyjazdy.zat_paliwo %></span>
+  </div>
+  <div class="link">
+    <%= link_to 'Edit', edit_przyjazdy_path(@przyjazdy) %> |
+    <%= link_to 'Back', przyjazdies_path %>
+  </div>
+</article>

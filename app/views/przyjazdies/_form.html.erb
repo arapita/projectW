@@ -1,0 +1,37 @@
+<%= form_for(@przyjazdy) do |f| %>
+  <% if @przyjazdy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@przyjazdy.errors.count, "error") %> prohibited this przyjazdy from being saved:</h2>
+
+      <ul>
+      <% @przyjazdy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data_przyj %>
+    <%= f.text_field :data_przyj %>
+  </div>
+  <div class="field">
+    <%= f.label :godz_przy %>
+    <%= f.text_field :godz_przy %>
+  </div>
+  <div class="field">
+    <%= f.label :nr_rej %>
+    <%= f.number_field :nr_rej %>
+  </div>
+  <div class="field">
+    <%= f.label :stan_licz %>
+    <%= f.number_field :stan_licz %>
+  </div>
+  <div class="field">
+    <%= f.label :zat_paliwo %>
+    <%= f.text_field :zat_paliwo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nr_rejestracyjnyn: MyString
+  marka: MyString
+  dysponent: MyString
+  stan_licznika: 1
+  lokalizacja: MyString
+
+two:
+  nr_rejestracyjnyn: MyString
+  marka: MyString
+  dysponent: MyString
+  stan_licznika: 1
+  lokalizacja: MyString

@@ -1,0 +1,20 @@
+<% title "Szukaj" %>
+
+<% @searches.each do |search| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Marka</span>
+    <span class="value"><%= search.marka %></span><br />
+    <span class="name">Zapytanie z dnia: </span><%= search.created_at.strftime("%d.%m.%Y %H.%M") %>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', search %> |
+    <%= link_to 'Edit', edit_search_path(search) %> |
+    <%= link_to 'Destroy', search, confirm: 'Are you sure?', method: :delete %>
+  </div>
+</article>
+<% end %>
+
+<div class="link">
+  <%= link_to 'Nowe zapytanie', new_search_path %>
+</div>

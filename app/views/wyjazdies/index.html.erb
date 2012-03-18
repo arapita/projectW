@@ -1,0 +1,47 @@
+<% title "Wyjazdy" %>
+
+<table border="2">
+    <tr>
+
+<td>Data wyjazdu</td>
+<td>Godz wyjazdu</td>
+<td>Marka poj.</td>
+<td>Nr rejestracyjny</td>
+<td>Kierowca</td>
+<td>Miejsce</td>
+<td>Stan licznika</td>
+    </tr>
+
+<% @wyjazdies.each do |wyjazdy| %>
+    <tr>
+
+    <td><%= wyjazdy.data_wyjazdu %></td>
+    
+    <td><%= wyjazdy.godz_wyjazdu %></td>
+
+    <td><%= wyjazdy.marka_poj %></td>
+
+    <td><%= wyjazdy.nr_rej %></td>
+ 
+    <td><%= wyjazdy.kierowca %></td>
+
+    <td><%= wyjazdy.miejsce %></td>
+
+    <td><%= wyjazdy.stan_licznika %></td>
+
+
+    <td><%= link_to 'Pokaż', wyjazdy %></td>
+     <% if can? :edit, Wyjazdy %>
+    <td><%= link_to 'Edytuj', edit_wyjazdy_path(wyjazdy) %> </td>
+      <% end %>
+     <% if can? :delete, Wyjazdy %>
+    <td><%= link_to 'Usuń', wyjazdy, confirm: 'Jesteś pewny?', method: :delete %></td>
+      <% end %>
+<% end %>
+</tr>
+</table>
+
+
+<% if can? :create, Wyjazdy %>
+  <%= link_to 'Nowy wyjazd', new_wyjazdy_path %>
+<% end %>
