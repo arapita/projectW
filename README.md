@@ -1,1 +1,1 @@
-# My Awesome Rails 3.1 App\n\nTODO
+It's just begining! :P
