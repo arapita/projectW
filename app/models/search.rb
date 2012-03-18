@@ -17,7 +17,7 @@ def marka_conditions
 end
 
 def lokalizacja_conditions
-  [" LIKE ?", "%#{lokalizacja}%"] unless lokalizacja.blank?
+  ["lokalizacja LIKE ?", "%#{lokalizacja}%"] unless lokalizacja.blank?
 end
 
 def dysponent_conditions

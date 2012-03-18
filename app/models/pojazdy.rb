@@ -9,10 +9,5 @@ class Pojazdy < ActiveRecord::Base
   end
   end
 
-  def self.search2(ord)
-    if ord
-      where('lokalizacja LIKE?', "BAZA")
-    end
 
-  end
 end

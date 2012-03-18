@@ -1,4 +1,4 @@
-<% title "Search" %>
+<% title "Wszystkie pojazdy" %>
 
 <table border="2">
   <tr>
@@ -7,15 +7,13 @@
     <td>Lokalizacja</td>
   </tr>
 
-<% @search.pojazdy.each do |pojazdy| %>
+<% @pojazdies.each do |pojazdy| %>
   <tr>
-    <% if pojazdy.marka? %>
     <td>  <%= pojazdy.marka %></td>
-    <%  end %>
     <td>  <%= pojazdy.nr_rejestracyjnyn %></td>
     <td>  <%= pojazdy.lokalizacja %></td>
 
-
+   
     <td> <%= link_to 'Pokaż', pojazdy %> </td>
     <% if can? :edit, pojazdy %>
     <td> <%= link_to 'Edytuj', edit_pojazdy_path(pojazdy) %> </td>
@@ -25,5 +23,6 @@
     <% end %>
   </tr>
 <% end %>
-
+  
 </table>
+<br />

@@ -3,14 +3,31 @@
 <% @searches.each do |search| %>
 <article class="index">
   <div class="attribute">
+    <% if search.marka? %>
     <span class="name">Marka</span>
     <span class="value"><%= search.marka %></span><br />
+    <% end %>
+    <% if search.lokalizacja? %>
+    <span class="name">Lokalizacja</span>
+    <span class="value"><%= search.lokalizacja %></span><br />
+    <% end %>
+    <% if search.dysponent? %>
+    <span class="name">Dysponent</span>
+    <span class="value"><%= search.dysponent %></span><br />
+    <% end %>
+    <% if search.min_stan? %>
+    <span class="name">Stan licznika od</span>
+    <span class="value"><%= search.min_stan %></span>
+    <% end %>
+    <% if search.max_stan? %>
+    <span class="value">do<%= search.max_stan %></span>
+    <% end %><br />
     <span class="name">Zapytanie z dnia: </span><%= search.created_at.strftime("%d.%m.%Y %H.%M") %>
   </div>
     <div class="links">
-    <%= link_to 'Show', search %> |
-    <%= link_to 'Edit', edit_search_path(search) %> |
-    <%= link_to 'Destroy', search, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'Pokaż', search %> |
+    <%= link_to 'Edytuj', edit_search_path(search) %> |
+    <%= link_to 'Usuń', search, confirm: 'Jesteś pewien?', method: :delete %>
   </div>
 </article>
 <% end %>
