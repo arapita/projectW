@@ -28,8 +28,8 @@
     <%= f.number_field :stan_licznika %>
   </div>
   <div class="field">
-    <%= f.label :lokalizacja %>
-    <%= f.text_field :lokalizacja %>
+    
+    <%= f.hidden_field :lokalizacja, :value => "Baza" %>
   </div>
   <div class="actions">
     <%= f.submit %>
