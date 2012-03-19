@@ -25,13 +25,17 @@
     <span class="name">Zapytanie z dnia: </span><%= search.created_at.strftime("%d.%m.%Y %H.%M") %>
   </div>
     <div class="links">
-    <%= link_to 'Pokaż', search %> |
-    <%= link_to 'Edytuj', edit_search_path(search) %> |
+    <%= link_to 'Pokaż', search %>
+      <% if can? :edit, search %>
+    <%= link_to 'Edytuj', edit_search_path(search) %>
+      <% end %>
+      <% if can? :delete, search %>
     <%= link_to 'Usuń', search, confirm: 'Jesteś pewien?', method: :delete %>
+      <% end %>
   </div>
 </article>
 <% end %>
 
-<div class="link">
+<% if can? :create, Search %>
   <%= link_to 'Nowe zapytanie', new_search_path %>
-</div>
+<% end %>

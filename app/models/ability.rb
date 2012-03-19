@@ -9,7 +9,10 @@ class Ability
       can [ :read, :create ] , Pojazdy
       can [ :read, :create ] , Wyjazdy
       can [ :read, :create ] , Przyjazdy
+      can [ :read, :create ] , Search
     end
+  else
+    can :read , :all
        
   end
 end

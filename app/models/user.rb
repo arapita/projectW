@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :pojazdies
   has_many :wyjazdies
   has_many :przyjazdies
-
+ 
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   # declare the valid roles -- do not change the order if you add more
   # roles later, always append them at the end!
-  roles :admin, :normal, :guest
+  roles :admin, :normal
 
 
 end
