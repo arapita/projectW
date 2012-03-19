@@ -43,3 +43,4 @@ gem "therubyracer"
 gem 'devise', '1.4.7'
 gem 'role_model'
 gem 'cancan'
+gem 'client_side_validations'
