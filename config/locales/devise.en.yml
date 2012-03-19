@@ -4,7 +4,7 @@ en:
   errors:
     messages:
       expired: "has expired, please request a new one"
-      not_found: "not found"
+      not_found: "nie znaleziono"
       already_confirmed: "was already confirmed, please try signing in"
       not_locked: "was not locked"
       not_saved:
@@ -13,28 +13,28 @@ en:
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
+      already_authenticated: 'Jesteś już zalogowany'
+      unauthenticated: 'Musisz się zalogować lub zarejestrować nim zaczniesz'
       unconfirmed: 'You have to confirm your account before continuing.'
       locked: 'Your account is locked.'
       invalid: 'Invalid email or password.'
       invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
+      timeout: 'Twoja sesja wygasła, musisz zalogować się jeszcze raz'
       inactive: 'Your account was not activated yet.'
     sessions:
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: 'Zalogowano pomyślnie'
+      signed_out: 'Wylogowano pomyślnie'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
-      updated: 'Your password was changed successfully. You are now signed in.'
-      updated_not_active: 'Your password was changed successfully.'
+      updated: 'Twoje hasło zostało zmienione, możesz się teraz zalogować'
+      updated_not_active: 'Twoje hasło zostało zmienione.'
       send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
     confirmations:
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       send_paranoid_instructions: 'If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
       confirmed: 'Your account was successfully confirmed. You are now signed in.'
     registrations:
-      signed_up: 'Welcome! You have signed up successfully.'
+      signed_up: 'Witam! Rejestracja przebiegła pozytywnie'
       inactive_signed_up: 'You have signed up successfully. However, we could not sign you in because your account is %{reason}.'
       updated: 'You updated your account successfully.'
       destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'

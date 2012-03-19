@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   has_many :pojazdies
   has_many :wyjazdies
   has_many :przyjazdies
- 
+
+  validates :username, :uniqueness => true
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

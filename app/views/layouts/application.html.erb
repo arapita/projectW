@@ -50,7 +50,7 @@
 
   </header>
   <div role="main">
-    <%= content_tag :h1, yield(:title) if show_title? %>
+    <%= content_tag yield(:title) if show_title? %>
     <%= yield %>
   </div>
   <footer>
